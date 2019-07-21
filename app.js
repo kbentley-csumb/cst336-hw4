@@ -3,7 +3,6 @@ const app = express();
 var faker = require('faker');
 
 
-
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
 
@@ -20,7 +19,7 @@ app.get("/gis", function(req, res) {
 app.get("/embedded", function(req, res) {
     var randomName = faker.name.findName(); 
     var randomEmail = faker.internet.email();
-    res.render("embedded.html"), {"fakeName" : randomName, "fakeEmail" : randomEmail };
+    res.render("embedded.html", {"fakeName" : randomName, "fakeEmail" : randomEmail });
 });
 
 app.get("/ci", function(req, res) {
