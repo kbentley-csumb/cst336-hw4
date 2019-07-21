@@ -1,5 +1,9 @@
 const express = require("express");
 const app = express();
+var faker = require('faker');
+
+
+
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
 
@@ -8,15 +12,21 @@ app.get("/",function(req,res) {
 });
 
 app.get("/gis", function(req, res) {
-    res.render("gis.html");
+    var randomName = faker.name.findName(); 
+    var randomEmail = faker.internet.email();
+    res.render("gis.html", {"fakeName" : randomName, "fakeEmail" : randomEmail });
 });
 
 app.get("/embedded", function(req, res) {
-    res.render("embedded.html");
+    var randomName = faker.name.findName(); 
+    var randomEmail = faker.internet.email();
+    res.render("embedded.html"), {"fakeName" : randomName, "fakeEmail" : randomEmail };
 });
 
 app.get("/ci", function(req, res) {
-    res.render("ci.html");
+    var randomName = faker.name.findName(); 
+    var randomEmail = faker.internet.email();
+    res.render("ci.html", {"fakeName" : randomName, "fakeEmail" : randomEmail });
 });
 
 

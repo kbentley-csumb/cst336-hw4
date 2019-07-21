@@ -25,8 +25,8 @@ nav a {
 
 .topicdetail {
     text-align: left;
-    background: white;
-    color: black;
+    background: rgba(200, 255, 200, 0.9) !important;
+    color: rgb(2, 41, 2)) !important;
 }
 
 .topicsummary {
@@ -40,7 +40,7 @@ nav a {
 
 .topiccontent {
     display: flex;
-    background: rgba(2, 41, 2, 0.5);
+    background: rgba(2, 41, 2, 0.5) !important;
 }
 
 nav {
