@@ -19,7 +19,7 @@ nav a {
 
 .menuselected {    
     color: yellowgreen;
-    font-size: 2em;
+    font-size: 1.25em;
     border-bottom: 2px;
 }
 
